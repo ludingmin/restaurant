@@ -1,0 +1,722 @@
+body {
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+}
+
+.top {
+    height: 100px;
+}
+
+.date {
+    float: left;
+    margin-left: 50px;
+    border-style: solid;
+    border-color: burlywood;
+    border-radius: 50px;
+    border-width: 10px;
+    background-color: blanchedalmond;
+    width: 200px;
+    height: 50px;
+}
+
+#week {
+    margin-left: 45px;
+    line-height: 50px;
+    color: yellowgreen;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+#day {
+    margin-left: 20px;
+    line-height: 50px;
+    color: yellowgreen;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.income {
+    float: right;
+    margin-left: 50px;
+    border-style: solid;
+    border-color: burlywood;
+    border-radius: 50px;
+    border-width: 10px;
+    background-color: blanchedalmond;
+    width: 200px;
+    height: 50px;
+}
+
+
+.total-incom {
+    margin-left: 60px;
+    line-height: 50px;
+    color: yellowgreen;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.kitchen {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding-bottom: 4%;
+    padding-top: 4%;
+    width: 85%;
+    border-style: solid;
+    border-color: aliceblue;
+    background-color: #ccb854;
+    border-width: 15px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.yuan {
+    background-color: aliceblue;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+}
+
+.chef {
+    position: relative;
+    margin-left: 12%;
+    margin-bottom: 4%;
+    float: left;
+
+}
+
+.fireChef {
+    display: block;
+    position: absolute;
+    right: 0%;
+    top: -7%;
+    width: 17%;
+    height: 22%;
+    font-size: 350%;
+    font-weight: 500;
+    color: red;
+}
+
+.employchef {
+    margin-top: 0px;
+    margin-left: 12%;
+    float: left;
+}
+
+.max-table {
+    margin-top: 5%;
+    width: 86%;
+    height: 591px;
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 15px;
+    border-color: aliceblue;
+    background-color: #de995d;
+    border-radius: 30px;
+    margin-left: 6%;
+}
+
+.welcomeSpeech {
+    position: absolute;
+    top: 0%;
+    width: 60%;
+    margin-top: 200px;
+    margin-left: 20%;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 10px;
+    background-color: yellow;
+}
+
+.massage {
+    margin-left: 20%;
+    width: 60%;
+}
+
+h1 {
+    color: darkgoldenrod;
+    text-align: center;
+}
+
+.encourage {
+    font-size: 20px;
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+.anniu {
+    width: 40%;
+    margin-left: 30%;
+    color: darkgoldenrod;
+}
+
+.start {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: rgb(255, 225, 0);
+    border-style: solid;
+    width: 30%;
+    height: 50px;
+    border-color: burlywood;
+    border-radius: 50px;
+    border-width: 7px;
+    margin-left: 35%;
+    text-align: center;
+    line-height: 50px;
+    color: darkgoldenrod0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.employ-windows {
+    width: 153%;
+    height: 450px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 10px;
+    background-color: yellow;
+}
+
+.fire-windows {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 10px;
+    background-color: yellow;
+}
+
+.employ-massage {
+    font-size: 20px;
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+.fire-massage {
+    font-size: 20px;
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+.warning-empty {
+    display: none;
+    background-color: blue;
+    width: 60%;
+    height: 100px;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: aliceblue;
+    border-width: 10px;
+    color: burlywood;
+    float: left;
+    margin-top: 300px;
+    margin-left: 20%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.warning-ordering-finish {
+    display: none;
+    position: absolute;
+    top: 68%;
+    left: 20%;
+    background-color: blue;
+    width: 60%;
+    height: 100px;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: aliceblue;
+    border-width: 10px;
+    color: burlywood;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+}
+
+.warning-eating-finish {
+    display: none;
+    position: absolute;
+    top: 67%;
+    background-color: blue;
+    width: 60%;
+    height: 100px;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: aliceblue;
+    border-width: 10px;
+    color: burlywood;
+    float: left;
+    margin-top: 50px;
+    margin-left: 20%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.warning-customer-leaving {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    background-color: blue;
+    width: 60%;
+    height: 100px;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: aliceblue;
+    border-width: 10px;
+    color: burlywood;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+}
+
+.warning-success-employ {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    background-color: blue;
+    width: 60%;
+    height: 100px;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: aliceblue;
+    border-width: 10px;
+    color: burlywood;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+}
+
+.warning-success-fire {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    background-color: blue;
+    width: 60%;
+    height: 100px;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: aliceblue;
+    border-width: 10px;
+    color: burlywood;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+}
+
+.firstRow {
+    margin-top: -1%;
+    display: flex;
+    height: 300px;
+}
+
+.secondRow {
+    display: flex;
+    height: 300px;
+}
+
+.right-top {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-right: 500px;
+}
+
+.left-top {
+    display: flex;
+    margin-left: 19%;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-right: 26%;
+}
+
+.table {
+    width: 100px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: aliceblue;
+    border-left: 100px solid gray;
+}
+
+.left-bottom {
+    display: flex;
+    margin-left: 20%;
+    width: 200px;
+    height: 200px;
+    margin-top: 4%;
+    margin-right: 25%;
+}
+
+.right-bottom {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-right: 500px;
+}
+
+.ordering-page {
+    display: none;
+    margin-top: 200px;
+    background-color: darkseagreen;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 15px;
+    border-radius: 25px;
+    width: 90%;
+    height: 1050px;
+    position: absolute;
+    left: 4%;
+    top: 3%;
+}
+
+.ordering-customer {
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-top: -100px;
+    margin-left: 200px;
+}
+
+.ordering-title {
+    font-size: 30px;
+    color: blanchedalmond;
+}
+
+.menu {
+    border-style: solid;
+    border-width: 10px;
+    border-color: burlywood;
+    border-radius: 5px;
+    background-color: aliceblue;
+    margin-top: 40px;
+    width: 90%;
+    margin-left: 5%;
+    height: 770px;
+}
+
+h3 {
+    font-size: 30px;
+    color: burlywood;
+    margin-left: 70px;
+    font-weight: 700;
+}
+
+.menu-items {
+    margin-top: 20px;
+    margin-left: 90px;
+    font-size: 25px;
+    font-weight: 600;
+    color: darksalmon;
+}
+
+.you {
+    float: right;
+    margin-top: -25px;
+    margin-right: 50px;
+}
+
+.willing {
+    margin-top: 50px;
+    margin-left: 10%;
+    width: 80%;
+    height: 100px;
+}
+
+.accept {
+    height: 85px;
+    background-color: burlywood;
+    width: 40%;
+    float: left;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 10px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    color: antiquewhite;
+    position: relative;
+    top: 70px;
+}
+
+.sure-employ {
+    height: 70px;
+    background-color: burlywood;
+    width: 40%;
+    float: left;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 10px;
+    border-radius: 50px;
+    line-height: 70px;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.sure-fire {
+    height: 70px;
+    background-color: burlywood;
+    width: 40%;
+    float: left;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 10px;
+    border-radius: 50px;
+    line-height: 70px;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.refuse {
+    height: 70px;
+    background-color: burlywood;
+    width: 40%;
+    float: right;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 10px;
+    border-radius: 50px;
+    line-height: 70px;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    color: antiquewhite;
+    position: relative;
+    top: 70px;
+}
+
+.cancel-employ {
+    height: 70px;
+    background-color: burlywood;
+    width: 40%;
+    float: right;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 10px;
+    border-radius: 50px;
+    line-height: 70px;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.cancel-fire {
+    height: 70px;
+    background-color: burlywood;
+    width: 40%;
+    float: right;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 10px;
+    border-radius: 50px;
+    line-height: 70px;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    color: antiquewhite;
+}
+.addcustomer{
+    display: block;
+    width: 200%;
+    height: 100%;
+    position: relative;
+    left: -100%;
+    top: -4%;
+    position: relative;
+}
+.employ-page{
+    display: none;
+    position: absolute;
+    left: 15%;
+    top: 21%;
+    
+}
+.fire-page{
+    display: none;
+    position: absolute;
+    top: 12%;
+    left: 16%;
+    height: 65%;
+    width: 67%;
+}
+.waitingarea{
+    position: relative;
+    top: -5%;
+    height: 20%;
+}
+.waitingcustomer_1{
+    float: right;
+    border-radius: 50%;
+    border: 10px solid aliceblue;
+    width: 14%;
+    height: 100%;
+
+    background-color: blue;
+}
+.waitingcustomer_other{
+    float: right;
+    border-radius: 50%;
+    border: 10px solid aliceblue;
+    width: 14%;
+    height: 100%;
+    margin-right: -3%;
+    background-color: blue;
+}
+.cimg{
+    width: 100%;
+    height: 100%;
+}
+.d1{
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 15%;
+    right: -60%;
+    border: 3px solid black;
+    background-color: rgb(160, 147, 147);;
+}
+.d2{
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 30%;
+    right: -60%;
+    border: 3px solid black;
+    background-color: rgb(160, 147, 147);;
+}
+.d3{
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 45%;
+    right: -60%;
+    border: 3px solid black;
+    background-color: rgb(160, 147, 147);;
+}
+.dd1{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 0px;
+    background-color:#7f6640;
+}
+.table{
+    position: relative;
+}
+
+.ming{
+    position: absolute;
+    top: -76%;
+    left: 10%;
+    z-index: 10;
+}
+.line{
+    border: 1px solid red;
+    background-color: red;
+    height: 0px;
+    position: absolute;
+    top: 39%;
+    left: -12%;
+    width: 119%;
+}
+.heart{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    bottom: -8%;
+    right: -20%;
+}
+.chef_dd1{
+    position: absolute;
+    border: 2px solid black;
+    bottom: -5%;
+    left: 17%;
+    background-color: rgb(160, 147, 147);
+    width: 130px;
+    height: 25px;
+}
+.chef_d1{
+    position: absolute;
+    left: 0px;top: 0px;
+    height: 100%;
+    width: 0px;
+    background-color: rgb(36 54 162);
+}
+.chef_p{
+    position: absolute;
+    top: -55%;
+    left: 17%;
+}
+.Food{
+    position: absolute;
+    right: -43%;
+    top: -89%;
+    height: 50px;
+    width: 50px;
+}
+.qian{
+    position: absolute;
+    width: 80%;
+    bottom: -10%;
+    left: -124%;
+}
+.noenough_money{
+    display: none;
+    position: absolute;
+    top: 37%;
+    left: 36%;
+    border: 7px solid white;
+    background-color: coral;
+    border-radius: 20px;
+    width: 30%;
+    height: 10%;
+}
+p{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+#salary{
+    color: #5a4545;
+}
+.noenough_firemoney{
+    display: none;
+    position: absolute;
+    top: 37%;
+    left: 36%;
+    border: 7px solid white;
+    background-color: coral;
+    border-radius: 20px;
+    width: 30%;
+    height: 10%;
+}
+.welcome{
+    background-color: rgba(0, 0, 0, 0.6);;
+    width: 100%;
+    height: 180%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#customer-picture{
+    background-color: rgba(111, 111, 175);
+}

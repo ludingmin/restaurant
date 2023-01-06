@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+ 
+    <div class="page">
+        <!-- 顶部日期和收入 -->
+        <div class="top">
+            <div class="date">
+                <span id="week">W1</span>
+                <span id="day">D1</span>
+            </div>
+            <div class="income">
+                <span class="total-incom" id="total-income">500</span>
+            </div>
+        </div>
+        <!-- 厨师区域 -->
+        <div class="kitchen">
+            <!-- 每个厨师都用一个div包起来，最多6个厨师 -->
+            <div class="chef" id="chef-1">
+                <img class="yuan yuan1" src="images/chef.png" alt="">
+            </div>
+            <!-- 解雇厨师时右上角的叉叉，只有一个厨师时不能解雇 -->
+            
+            <!-- 点击新增厨师 -->
+            <div class="employchef" id="employChef">
+                <img class="yuan" src="images/no-chef.png" alt="#">
+            </div>
+        </div>
+    </div>
+
+    <div class="warning-empty" id="warning-empty">
+        <p>餐厅当前有空位，赶紧点击等位客人头像 <br> 让客人入座点餐吧</p>
+    </div>
+
+
+    <!-- 顾客区域 -->
+    <!-- 共有四个桌子,分别为第一行左上,右上,第二行左下,右下 -->
+    <div class="max-table">
+        <!-- 第一行的两个桌子放在同一个div中,然后再用两个子盒子分别放左上和右上的桌子 -->
+        <div class="firstRow" id="firstRow">
+            <!-- 左上的桌子 -->
+            <div class="left-top" id="t">
+                <!-- table用来设置桌子的样式:白色圆圈和桌子的背景色,下同 -->
+                <div class="table" id="t1">
+                    
+                </div>
+            </div>
+            <!-- 右上的桌子 -->
+            <div class="right-top" >
+                <div class="table" id="t2"></div>
+            </div>
+        </div>
+
+        <!-- 第二行桌子的两个桌子放在同一个div中,再用两个子盒子分别放左下和右下的桌子 -->
+        <div class="secondRow" id="secondRow">
+            <!-- 左下的桌子 -->
+            <div class="left-bottom" >
+                <div class="table" id="t3"></div>
+            </div>
+            <!-- 右下的桌子 -->
+            <div class="right-bottom" >
+                <div class="table" id="t4"></div>
+            </div>
+        </div>
+        <div class="waitingarea">
+           
+        </div>
+    </div>
+
+    <!-- 刚开始时的欢迎页面 -->
+    <!-- welcome为半透明黑色的遮罩页面,它覆盖了整个页面的!仅弹出一次 -->
+    <div class="welcome" id="welcome">
+        <!-- 欢迎语的所有内容用一个盒子包起来,且将其分为文字部分和经营按钮部分 -->
+        <div class="welcomeSpeech" id="welcomeSpeech">
+            <!-- 文字部分 -->
+            <div class="massage" id="massage">
+                <h1>WebMOOC餐厅开业啦!</h1>
+                <p class="encourage">
+                    WebMOOC餐厅即将开业,请认真经营你的餐厅吧<br>
+                    经营餐厅需要做好以下几件事情!加油!
+                </p>
+                <div class="anniu">
+                    <span>招聘厨师</span>
+                    <span>迎接客人</span>
+                    <span>烹饪美食</span>
+                </div>
+            </div>
+            <!-- 开始经营的按钮 -->
+            <div class="start" id="start">
+                开始经营吧
+            </div>
+        </div>
+    </div>
+
+    <!-- 顾客等位区 -->
+    <div class="watting-area" id="wating-area">
+        <!-- 通过js直接在侯餐区添加候餐顾客 -->
+    </div>
+
+    <!-- 短提示,提示有空位可让顾客入座,位于整个页面的中央 -->
+    <!-- 所有以warning开头的短提示窗口都是显示在相同的位置的 -->
+
+
+    <!-- 点餐,此部分分为四部分 -->
+    <div class="ordering-page" id="ordering-page">
+        <!-- 第一部分：顾客的头像 -->
+        <div class="ordering-customer" id="ordering-customer">
+            <img class="yuan" src="images/customer3.png" id="customer-picture">
+        </div>
+
+        <!-- 第二部分:标题 -->
+        <h2 class="ordering-title" id="ordering-title">QIAN 正在点菜，已点18元的菜</h2>
+
+        <!-- 第三部分:菜单内容 -->
+        <!-- 菜单整体用div盒子包起来,应设为半透明黑色遮罩页面，内容用form表单标签包起来 -->
+        <div class="menu" id="menu">
+            <form class="menu-form" id="menu-form" onsubmit="return mysubmit(this)">
+                <h3>凉菜（二选一，可不点）</h3>
+                <div class="menu-items" id="menu-items">
+                    <div><input type="checkbox" value="1" name="choice1"><span>凉拌SAN</span></div>
+                    <div class="you">············································<span>￥6</span></div>
+                </div>
+                <div class="menu-items" id="menu-items">
+                    <div><input type="checkbox" value="2" name="choice1"><span>冷切DOM</span></div>
+                    <div class="you">············································<span>￥4</span></div>
+                </div>
+                <h3>主菜（五选一，必点）</h3>
+                <div class="menu-items" id="menu-items">
+                    <div><input type="radio" value="1" name="choice2"><span>UL炖LI</span></div>
+                    <div class="you">············································<span>￥12</span></div>
+                </div>
+                <div class="menu-items" id="menu-items">
+                    <div><input type="radio" value="2" name="choice2"><span>红烧HEAD</span></div>
+                    <div class="you">············································<span>￥15</span></div>
+                </div>
+                <div class="menu-items" id="menu-items">
+                    <div><input type="radio" value="3" name="choice2"><span>酥炸ECharts</span></div>
+                    <div class="you">············································<span>￥18</span></div>
+                </div>
+                <div class="menu-items" id="menu-items">
+                    <div><input type="radio" value="4" name="choice2"><span>炙烤CSS</span></div>
+                    <div class="you">············································<span>￥16</span></div>
+                </div>
+                <div class="menu-items" id="menu-items">
+                    <div><input type="radio" value="5" name="choice2"><span>清蒸DIV</span></div>
+                    <div class="you">············································<span>￥12</span></div>
+                </div>
+                <h3>饮品（二选一，可不点）</h3>
+                <div class="menu-items" id="menu-items">
+                    <div><input type="checkbox" value="1" name="choice3"><span>鲜榨flex</span></div>
+                    <div class="you">············································<span>￥5</span></div>
+                </div>
+                <div class="menu-items" id="menu-items">
+                    <div><input type="checkbox" value="2" name="choice3"><span>小程序奶茶</span></div>
+                    <div class="you">············································<span>￥6</span></div>
+                </div>
+                <input type="submit" name="" value="点好了，快点上菜" class="accept" id="accept">
+                <div class="refuse" id="refuse">不吃了</div>
+            </form>
+        </div>
+
+        <!-- 第四部分： 意愿按钮-->
+        <!-- <div class="willing">
+            <div class="accept" id="accept">
+                点好了，快点上菜
+            </div>
+            <div class="refuse" id="refuse">
+                不吃了
+            </div>
+        </div> -->
+
+    </div>
+
+    <!-- 短提示,提示顾客已经完成点餐,与前面空位置的提示显示的位置相同 -->
+    <div class="warning-ordering-finish" id="warning-ordering-finish">
+        <p>QIAN完成点餐，等候用餐<br>疯狂点击厨师头象可以加速做菜速度</p>
+    </div>
+
+    <!-- 短提示,提示顾客已经完成用餐,与前面空位置的提示显示的位置相同 -->
+    <div class="warning-eating-finish" id="warining-eating-finish">
+        <p id="givemoney">QIAN完成用餐，收获￥18</p>
+    </div>
+
+    <!-- 短提示,顾客不吃了,与前面空位置的提示显示的位置相同 -->
+    <div class="warning-customer-leaving" id="warning-customer-leaving">
+        <p>QIAN失望而归，别再让客人挨饿了</p>
+    </div>
+
+    <!-- 招聘,该部分应为半透明遮罩,覆盖整个页面 -->
+    <div class="employ-page" id="employ-page">
+        <!-- 内容方框 -->
+        <div class="employ-windows" id="employ-windows">
+            <h1>招聘新厨师</h1>
+            <div class="employ-massage" id="employ-masssage">
+                招聘一名新厨师可以帮助你更快地为顾客烹饪菜肴，<br>
+                增加餐厅收入。你最多可以拥有六名厨师。<br>
+                但每个厨师每周需要你支付工资￥140 <br>
+                请问你确认新招聘一名厨师吗？<br>
+            </div>
+            <div class="willing">
+                <div class="sure-employ" id="sure-employ">
+                    是的，确认招聘
+                </div>
+                <div class="cancel-employ" id="cancel-emlpoy">
+                    先不了
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 短提示,招聘成功提示 -->
+    <div class="warning-success-employ" id="warning-success-employ">
+        <p id="emplynum">招聘厨师成功！您已经有5名厨师</p>
+    </div>
+
+    <!-- 解雇,该部分应为半透明遮罩,覆盖整个页面 -->
+    <div class="fire-page" id="fire-page">
+        <!-- 内容方框 -->
+        <div class="fire-windows" id="fire-windows">
+            <h1>解雇厨师</h1>
+            <div class="fire-massage" id="fire-massage">
+                解雇当前闲置的厨师可以帮你节省成本。<br>
+                解雇时会按本周已经工作的日子结算工资，并会<br>
+                赔偿一周的工资作为解约金。<br>
+                解雇当前厨师结算工资及解约金需要付出<p class="salary" id="salary">￥140</p><br>
+            </div>
+            <div class="willing">
+                <div class="sure-fire" id="sure-fire">是的，确认解雇</div>
+                <div class="cancel-fire" id="cancel">先不了</div>
+            </div>
+        </div>
+
+        <!-- 短提示,解雇成功提示 -->
+        
+
+    </div>
+    <div class="warning-success-fire" id="warning-success-fire">
+            <p id="jieyue">解约厨师成功，解约支出￥140</p>
+        </div>
+
+    <div class="noenough_money">
+        <p>你的钱不足100块</p>
+    </div>
+
+    <div class="noenough_firemoney">
+        <p class="noenough_firemoney1"></p>
+    </div>
+
+   
+</body>
+
+</html>
